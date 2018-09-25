@@ -63,19 +63,13 @@ public class TestPage {
 	public void testDemo() {
 			
 		driver.get("http://testingchallenges.thetestingmap.org/challenge6.php");
-		
-/*		
-		WebElement enterTextBar = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/form/div/div[1]/input"));		
-		enterTextBar.sendKeys("A");
-		enterTextBar.sendKeys(Keys.ENTER);
-*/								
-		
+	
 		test = extent.startTest("enter a sample string");
 		
 		MainPage homePage = PageFactory.initElements(driver, MainPage.class);
 		
 		homePage.mainPage("31/12/2016 23:59", action);
-		homePage.mainPage("01/12/2018 00:00", action);
+		homePage.mainPage("01/01/2018 00:00", action);
 		
 		String message = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/form/div/div[1]/input")).getAttribute("validationMessage");		
 		assertEquals(message, "Your input is not valid. Please use DD/MM/YYYY HH:MM");

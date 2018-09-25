@@ -2,8 +2,6 @@ package com.qa.model.challange6;
 
 import org.openqa.selenium.Keys;
 
-
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -19,13 +17,6 @@ public class MainPage {
 				
 			enterTextBar.sendKeys(sampleString);
 			action.sendKeys(Keys.ENTER).perform();
-		
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			
 		}
 	

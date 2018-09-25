@@ -3,6 +3,7 @@ package com.qa.test.challange2;
 //import static org.junit.Assert.*;
 
 import org.junit.Before;
+
 import org.junit.Test;
 import org.junit.After;
 import org.junit.Assert;
@@ -59,15 +60,7 @@ public class TestPage {
 	public void testDemo() {
 			
 		driver.get("http://testingchallenges.thetestingmap.org/challenge2.php");
-
-		
-/*		
-		WebElement enterTextBar = driver.findElement(By.xpath("/html/body/div[2]/div/div/form/div/div/div/div/input"));		
-
-		enterTextBar.sendKeys("A");
-		enterTextBar.sendKeys(Keys.ENTER);
-*/								
-		
+	
 		test = extent.startTest("enter a sample string");
 		
 		MainPage homePage = PageFactory.initElements(driver, MainPage.class);
